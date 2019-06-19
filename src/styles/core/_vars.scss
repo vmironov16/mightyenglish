@@ -1,5 +1,5 @@
 //Colors
-$blue: #08f;
+$purple: #322d6b;
 $red: #f44336;
 $green: #00c853;
 $yellow: #fc0;
@@ -7,7 +7,7 @@ $grey: #eee;
 $grey-light: #f9f9f9;
 
 //Used Colors
-$main: #322d6b;
+$main: $purple;
 $sec: lighten($main, 10);
 $accent: $red;
 $accent2: $yellow;
