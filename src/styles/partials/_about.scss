@@ -1,19 +1,22 @@
 #about {
-    .img-me-wrapper{
-        margin: 20px 10px ;
+    .img-me-wrapper {
+        display: block;
+        overflow: hidden;
+
         width: 200px;
         height: 200px;
-        border-radius:50%;
-        overflow: hidden;
-        
-            margin: 30px auto;
-            display: block;
-        img{
+        margin: 20px 10px;
+        margin: 30px auto;
+
+        border-radius: 50%;
+
+        img {
             width: 100%;
             height: auto;
         }
     }
-    .content-me-wrapper{
+
+    .content-me-wrapper {
         padding: 0 10px;
     }
 

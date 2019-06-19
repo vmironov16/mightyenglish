@@ -1,5 +1,5 @@
-@import "lib/bootstrap-grid";
-@import "lib/normalize";
+@import 'lib/bootstrap-grid';
+@import 'lib/normalize';
 
 @import 'core/vars';
 @import 'core/base';
@@ -18,8 +18,5 @@
 
 @import 'partials/particles-js';
 @import 'partials/about';
-@import 'partials/experience';
 @import 'partials/skills';
 @import 'partials/form';
-
-@import 'partials/projects';

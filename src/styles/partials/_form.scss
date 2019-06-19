@@ -1,5 +1,4 @@
-form
-{
+form {
     position: relative;
 
     display: block;
@@ -8,8 +7,7 @@ form
     margin: $form__margin;
 
     input,
-    textarea
-    {
+    textarea {
         font-family: unset;
         font-size: $form__el__font-size;
 
@@ -26,8 +24,7 @@ form
         box-shadow: none;
         ;
 
-        &:focus
-        {
+        &:focus {
             padding: $form__el__padding--focus;
 
             border-bottom: $form__el__border-bottom--focus;
@@ -37,21 +34,18 @@ form
         }
     }
 
-    textarea
-    {
+    textarea {
         height: $form__textarea__width;
 
         resize: none;
     }
 
     input[type=submit],
-    button[type=submit]
-    {
+    button[type=submit] {
         margin: $form__submit__margin;
     }
 
-    .hint
-    {
+    .hint {
         font-size: $form__hint__font-size;
 
         opacity: $form__hint__opacity;
