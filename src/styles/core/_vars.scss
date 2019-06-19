@@ -1,6 +1,7 @@
 //Colors
 $purple: #322d6b;
 $red: #f44336;
+$red-bright: #ff2818;
 $green: #00c853;
 $yellow: #fc0;
 $grey: #eee;
@@ -10,6 +11,7 @@ $grey-light: #f9f9f9;
 $main: $purple;
 $sec: lighten($main, 10);
 $accent: $red;
+$accent-bright: $red-bright;
 $accent2: $yellow;
 $default-color: $grey;
 $default-color--lighten: $grey-light;
@@ -48,12 +50,24 @@ $header__down-arrow__font-color: #FFF;
 $header__down-arrow__icon__height: 50px;
 $header__down-arrow__icon__width: 100px;
 
+$header__site-title__font-color: #FFF;
+$header__site-title__font-family: 'Lolapeluza';
+$header__site-title-eng__font-size--small-screen: 43px;
+$header__site-title-ru__font-size--small-screen: 29px;
+$header__site-title-eng__font-size: 80px;
+$header__site-title-ru__font-size: 60px;
+$header__site-title__font-weight: 100;
+$header__site-title__font-style: normal;
+
+
 //Partcles-JS
 $particles-js__background-color: $main;
 
 //Logo
 $logo__height:300px;
 $logo__width: $logo__height; 
+$logo__background-color: #FFF;
+$logo__img__padding: 20px;
 
 //Icons
 $icon__font-color: $main;
@@ -81,16 +95,10 @@ $form__el__border-bottom--focus: 2px solid $accent2;
 $form__el__border-radius--focus: 5px;
 $form__el__padding--focus: 15px 10px;
 
-//Timeline
-$timeline__line-color: $default-color;
-$timeline__point-color: $main;
-$timeline__li__h2__font-size: 24px;
-$timeline__li__h3__font-size: 20px;
-$timeline__li__h2__point-border-width: 3px;
-
-$timeline__li__h2__font-color--hover: $accent;
-$timeline__li__h2__point-color--hover: $timeline__li__h2__font-color--hover;
-$timeline__li__h2__point-border-width--hover: 4px;
+//Skills
+$skill__icon__font-size: 80px;
+$skill__icon__margin-top: 40px;
+$skill__icon__title__font-color--hover: $accent2;
 
 //Footer
 $footer__background-color: $main;

@@ -20,18 +20,20 @@
         margin: 0 auto;
 
         border-radius: 50%;
+        background-color: $logo__background-color;
 
         img {
             display: block;
 
             width: 100%;
             height: 100%;
+            padding: $logo__img__padding;
         }
 
-         @media only screen and (min-width: $cut) {
-             width: $logo__width;
-                height: $logo__height;
-         }
+        @media only screen and (min-width: $cut) {
+            width: $logo__width;
+            height: $logo__height;
+        }
     }
 
     h1 {
@@ -39,25 +41,58 @@
     }
 
     .site-title {
-        font-size: 33px;
+        font-family: $header__site-title__font-family;
+        
+        font-weight: $header__site-title__font-weight;
+        font-style: $header__site-title__font-style;
         line-height: 1;
 
         display: block;
 
-        color: #fff;
+        text-transform: lowercase;
+
+        color: $header__site-title__font-color;
 
         @media only screen and (min-width: $cut) {
-            font-size: 50px;
+            
 
             margin: 0;
+
+            .site-title-ru {
+                font-size: $header__site-title-ru__font-size;
+            }
+            .site-title-eng{
+                font-size: $header__site-title-eng__font-size;
+            }
+        }
+
+        &-ru {
+            font-size: $header__site-title-ru__font-size--small-screen;
+
+            display: none;
+
+            color: $accent-bright;
+        }
+
+        &-eng{
+            font-size: $header__site-title-eng__font-size--small-screen;
+        }
+
+        &:hover {
+            .site-title-eng {
+                display: none;
+            }
+
+            .site-title-ru {
+                display: inline-block;
+            }
         }
     }
 
     .site-description {
-        font-size: 16px;
+        font-size: 13px;
         font-weight: 100;
         line-height: 1;
-
 
         display: block;
 
@@ -66,7 +101,7 @@
         color: #fff;
 
         @media only screen and (min-width: $cut) {
-            font-size: 25px;
+            font-size: 24px;
         }
     }
 }
@@ -89,48 +124,6 @@
     }
 }
 
-.header-icons {
-    display: flex;
-
-    box-sizing: content-box;
-
-    text-align: center;
-
-    justify-content: center;
-
-    .icon {
-        font-size: 20px;
-
-        width: 20px;
-        height: 20px;
-        margin: 5px;
-        padding: 10px;
-
-        transition: all 300ms;
-        text-align: center;
-
-        color: #fff;
-        border: 2px solid #fff;
-        border-radius: 50%;
-
-        &:hover {
-            color: $main;
-            background: #fff;
-        }
-
-        &:active {
-            color: $accent;
-            background: #fff;
-        }
-
-        @media only screen and (min-width:$cut) {
-            font-size: 30px;
-
-            width: 30px;
-            height: 30px;
-        }
-    }
-}
 
 .down {
     font-size: 30px;

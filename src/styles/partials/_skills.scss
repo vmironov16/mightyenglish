@@ -1,17 +1,29 @@
 #skills {
-    .icons-list {
-        h3 {
-            text-align: center;
+    .skills-list {
+        .skill {
+            h3 {
+                text-align: center;
+            }
 
-        }
+            .icon {
+                font-size: $skill__icon__font-size;
 
-        .icon {
-            font-size: 80px;
+                display: block;
 
-            display: block;
+                margin-top: $skill__icon__margin-top;
 
-            text-align: center;
-            margin-top: 40px;
+                text-align: center;
+            }
+
+            &:hover {
+                h3 {
+                    color: $skill__icon__title__font-color--hover;
+                }
+
+                .icon {
+                    @extend .icon:hover;
+                }
+            }
         }
     }
 }
