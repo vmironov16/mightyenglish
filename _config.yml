@@ -2,7 +2,7 @@
 title: Mighty English
 description: Курсы английского языка
 # baseurl: "mightyenglish" # the subpath of your site, e.g. /blog
-# url: ""
+url: ""
 # url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
 # User settings
