@@ -1,6 +1,10 @@
 #skills {
     .skills-list {
         .skill {
+            padding: $skill__padding;
+
+            transition: 250ms;
+
             h3 {
                 text-align: center;
             }
@@ -12,10 +16,13 @@
 
                 margin-top: $skill__icon__margin-top;
 
+                transition: 250ms;
                 text-align: center;
             }
 
             &:hover {
+                background-color: $skill__background-color--hover;
+
                 h3 {
                     color: $skill__icon__title__font-color--hover;
                 }

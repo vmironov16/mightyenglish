@@ -8,11 +8,11 @@ $grey: #eee;
 $grey-light: #f9f9f9;
 
 //Used Colors
-$main: $purple;
-$sec: lighten($main, 10);
-$accent: $red;
-$accent-bright: $red-bright;
-$accent2: $yellow;
+$main-color: $purple;
+$sec-color: lighten($main-color, 10);
+$accent-color: $red;
+$accent-bright-color: $red-bright;
+$accent-color2: $yellow;
 $default-color: $grey;
 $default-color--lighten: $grey-light;
 
@@ -23,32 +23,35 @@ $body__font-color: #555;
 $cut: 550px;
 
 //Links
-$link__font-color--hover: $sec;
-$link__font-color--active: $accent;
+$link__font-color--hover: $sec-color;
+$link__font-color--active: $accent-color;
 
 //Button
-$button__background-color: $main;
+$button__background-color: $main-color;
 $button__font-color: #FFF;
 $button__border: none;
 $button__padding: 10px 20px;  
 $button__border-radius: 50px;
 
-$button--background-color--hover: $accent;
+$button--background-color--hover: $accent-color;
 $button__font-color--hover: #FFF;
 
-$button--background-color--active: $accent;
+$button--background-color--active: $accent-color;
 $button__font-color--active: #FFF;
 
 //Header
 $header__button-primary-primary__background-color: $button__background-color;
 $header__button-primary__font-color: #FFF;
 $header__button-primary__padding: 10px 20px 12px; 
-$header__button-primary__background-color--hover: $accent;
-$header__button-primary__background-color--active: $accent;
+$header__button-primary__background-color--hover: $accent-color;
+$header__button-primary__background-color--active: $accent-color;
 
 $header__down-arrow__font-color: #FFF;
 $header__down-arrow__icon__height: 50px;
 $header__down-arrow__icon__width: 100px;
+
+$header__down-arrow__font-color--hover: #FFF;
+$header__down-arrow__font-color--active: $sec-color;
 
 $header__site-title__font-color: #FFF;
 $header__site-title__font-family: 'Lolapeluza';
@@ -56,12 +59,13 @@ $header__site-title-eng__font-size--small-screen: 43px;
 $header__site-title-ru__font-size--small-screen: 29px;
 $header__site-title-eng__font-size: 80px;
 $header__site-title-ru__font-size: 60px;
+$header__site-title-ru__font-color: $accent-bright-color;
 $header__site-title__font-weight: 100;
 $header__site-title__font-style: normal;
 
 
 //Partcles-JS
-$particles-js__background-color: $main;
+$particles-js__background-color: $main-color;
 
 //Logo
 $logo__height:300px;
@@ -70,8 +74,8 @@ $logo__background-color: #FFF;
 $logo__img__padding: 20px;
 
 //Icons
-$icon__font-color: $main;
-$icon__font-color--hover: $accent2;
+$icon__font-color: $main-color;
+$icon__font-color--hover: $accent-color2;
 
 
 //Form
@@ -91,17 +95,20 @@ $form__submit__margin: 10px 0;
 $form__hint__font-size: 14px;
 $form__hint__opacity: .8;
 
-$form__el__border-bottom--focus: 2px solid $accent2;
+$form__el__border-bottom--focus: 2px solid $accent-color2;
 $form__el__border-radius--focus: 5px;
 $form__el__padding--focus: 15px 10px;
 
 //Skills
+$skill__padding: 0 40px;
 $skill__icon__font-size: 80px;
 $skill__icon__margin-top: 40px;
-$skill__icon__title__font-color--hover: $accent2;
+$skill__icon__title__font-color--hover: $accent-color2;
+
+$skill__background-color--hover: $default-color--lighten;
 
 //Footer
-$footer__background-color: $main;
+$footer__background-color: $main-color;
 $footer__font-color: #FFF;
 $footer__margin: 100px 0 0 0;
 $footer__padding: 30px;
@@ -111,5 +118,5 @@ $footer__icon__font-size: 30px;
 $footer__icon__margin-right: 20px;
 
 $footer__icon__font-size--hover: 40px;
-$footer__icon__font-color--hover: $accent2;
-$footer__icon__font-color--active: $accent;
+$footer__icon__font-color--hover: $accent-color2;
+$footer__icon__font-color--active: $accent-color;
