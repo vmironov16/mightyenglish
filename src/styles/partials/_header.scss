@@ -71,7 +71,7 @@
 
             display: none;
 
-            color: $accent-bright;
+            color: $header__site-title-ru__font-color;
         }
 
         &-eng{
@@ -160,12 +160,12 @@
         fill: #fff;
 
         &:hover {
-            color: #fff;
+            color: $header__down-arrow__font-color--hover;
         }
 
         &:active {
             opacity: 1;
-            color: $sec;
+            color: $header__down-arrow__font-color--active;
         }
     }
 }
