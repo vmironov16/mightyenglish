@@ -1,0 +1,59 @@
+form
+{
+    position: relative;
+
+    display: block;
+
+    max-width: $form__max-width;
+    margin: $form__margin;
+
+    input,
+    textarea
+    {
+        font-family: unset;
+        font-size: $form__el__font-size;
+
+        width: 100%;
+        margin-bottom: $form__el__margin-bottom;
+        padding: $form__el__padding;
+
+        transition: all .3s;
+
+        border: none;
+        border-bottom: $form__el__border-bottom;
+        border-radius: 0;
+        background-color: transparent;
+        box-shadow: none;
+        ;
+
+        &:focus
+        {
+            padding: $form__el__padding--focus;
+
+            border-bottom: $form__el__border-bottom--focus;
+            border-radius: $form__el__border-radius--focus;
+            outline: none;
+            background: $form__el__background-color--focus;
+        }
+    }
+
+    textarea
+    {
+        height: $form__textarea__width;
+
+        resize: none;
+    }
+
+    input[type=submit],
+    button[type=submit]
+    {
+        margin: $form__submit__margin;
+    }
+
+    .hint
+    {
+        font-size: $form__hint__font-size;
+
+        opacity: $form__hint__opacity;
+    }
+}

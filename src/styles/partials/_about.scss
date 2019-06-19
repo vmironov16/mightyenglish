@@ -1,0 +1,38 @@
+#about {
+    .img-me-wrapper{
+        margin: 20px 10px ;
+        width: 200px;
+        height: 200px;
+        border-radius:50%;
+        overflow: hidden;
+        
+            margin: 30px auto;
+            display: block;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .content-me-wrapper{
+        padding: 0 10px;
+    }
+
+    .info-list {
+        overflow: auto;
+
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        padding: 10px 0;
+
+        text-align: left;
+
+        div {
+            padding-right: 10px !important;
+            padding-left: 0 !important;
+        }
+
+        span {
+            @extend .bold;
+        }
+    }
+}

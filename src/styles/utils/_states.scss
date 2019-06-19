@@ -1,0 +1,13 @@
+.bold {
+    font-weight: 600;
+
+    margin-right: 5px;
+
+    color: $font-color;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}

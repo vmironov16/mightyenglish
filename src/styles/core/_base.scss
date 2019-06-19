@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+
+    margin: 0;
+    padding: 0;
+
+    color: $body__font-color;
+
+    >.content {
+        width: 90%;
+        max-width: 960px;
+        margin: 0 auto;
+
+        @media only screen and (min-width: $cut) {
+            width: 80%;
+        }
+    }
+}
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+nav,
+section {
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+stong {
+    line-height: 1.25;
+
+    margin-top: 1em;
+    padding-top: 1em;
+
+    color: $font-color;
+}
+
+h1 {
+    font-size: 2.5rem;
+
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+ul,
+ol {
+    margin: 1em 0;
+    padding-left: 40px;
+}
+
+p,
+figure {
+    margin: 1em 0;
+}
+
+a img {
+    border: none;
+}
+
+sup,
+sub {
+    line-height: 0;
+}
+
+a {
+    transition: 300ms;
+
+    &:hover {
+        color: $link__font-color--hover;
+    }
+
+    &:active {
+        color: $link__font-color--active;
+    }
+}
+
+hr {
+    background-color: $default-color;
+    border: 1px solid $default-color;
+    margin: 20px 0;
+}

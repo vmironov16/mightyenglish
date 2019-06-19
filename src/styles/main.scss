@@ -1,0 +1,25 @@
+@import "lib/bootstrap-grid";
+@import "lib/normalize";
+
+@import 'core/vars';
+@import 'core/base';
+
+@import 'utils/states';
+@import 'utils/animation';
+
+
+
+@import 'UI/button';
+@import 'UI/icons';
+
+
+@import 'partials/header';
+@import 'partials/footer';
+
+@import 'partials/particles-js';
+@import 'partials/about';
+@import 'partials/experience';
+@import 'partials/skills';
+@import 'partials/form';
+
+@import 'partials/projects';

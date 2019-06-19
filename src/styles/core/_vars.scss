@@ -1,0 +1,106 @@
+//Colors
+$blue: #08f;
+$red: #f44336;
+$green: #00c853;
+$yellow: #fc0;
+$grey: #eee;
+$grey-light: #f9f9f9;
+
+//Used Colors
+$main: #322d6b;
+$sec: lighten($main, 10);
+$accent: $red;
+$accent2: $yellow;
+$default-color: $grey;
+$default-color--lighten: $grey-light;
+
+$font-color: #333;
+$body__font-color: #555;
+
+//Media queries
+$cut: 550px;
+
+//Links
+$link__font-color--hover: $sec;
+$link__font-color--active: $accent;
+
+//Button
+$button__background-color: $main;
+$button__font-color: #FFF;
+$button__border: none;
+$button__padding: 10px 20px;  
+$button__border-radius: 50px;
+
+$button--background-color--hover: $accent;
+$button__font-color--hover: #FFF;
+
+$button--background-color--active: $accent;
+$button__font-color--active: #FFF;
+
+//Header
+$header__button-primary-primary__background-color: $button__background-color;
+$header__button-primary__font-color: #FFF;
+$header__button-primary__padding: 10px 20px 12px; 
+$header__button-primary__background-color--hover: $accent;
+$header__button-primary__background-color--active: $accent;
+
+$header__down-arrow__font-color: #FFF;
+$header__down-arrow__icon__height: 50px;
+$header__down-arrow__icon__width: 100px;
+
+//Partcles-JS
+$particles-js__background-color: $main;
+
+//Logo
+$logo__height:300px;
+$logo__width: $logo__height; 
+
+//Icons
+$icon__font-color: $main;
+
+
+//Form
+$form__margin: 0 auto;
+$form__max-width: 600px;
+
+$form__el__background-color--focus: $default-color--lighten;
+$form__el__border-bottom: 1px solid $font-color;
+$form__el__font-size: 15px;
+$form__el__margin-bottom: 1.5rem;
+$form__el__padding: 10px;
+
+$form__textarea__width: 150px;
+
+$form__submit__margin: 10px 0;
+
+$form__hint__font-size: 14px;
+$form__hint__opacity: .8;
+
+$form__el__border-bottom--focus: 2px solid $accent2;
+$form__el__border-radius--focus: 5px;
+$form__el__padding--focus: 15px 10px;
+
+//Timeline
+$timeline__line-color: $default-color;
+$timeline__point-color: $main;
+$timeline__li__h2__font-size: 24px;
+$timeline__li__h3__font-size: 20px;
+$timeline__li__h2__point-border-width: 3px;
+
+$timeline__li__h2__font-color--hover: $accent;
+$timeline__li__h2__point-color--hover: $timeline__li__h2__font-color--hover;
+$timeline__li__h2__point-border-width--hover: 4px;
+
+//Footer
+$footer__background-color: $main;
+$footer__font-color: #FFF;
+$footer__margin: 100px 0 0 0;
+$footer__padding: 30px;
+
+$footer__icon__font-color: #FFF;
+$footer__icon__font-size: 30px;
+$footer__icon__margin-right: 20px;
+
+$footer__icon__font-size--hover: 40px;
+$footer__icon__font-color--hover: $accent2;
+$footer__icon__font-color--active: $accent;
