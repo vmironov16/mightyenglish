@@ -1,4 +1,4 @@
-# Particle Jekyll Theme
+# Mighty English Jekyll Theme
 
 ![](./particle.jpg)
 
@@ -31,23 +31,6 @@ description: A blog about lorem ipsum dolor sit amet
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://localhost:3000" # the base hostname & protocol for your site
 
-# User settings
-
-
-username: Lorem Ipsum
-user_title: Developer
-user_description: Developer at Lorem Ipsum Dolor
-email: user@email.com
-
-resume_link: https://link
-
-social_link__tel: tel:+79991554016
-social_link__email: mailto:user@email.com
-social_link__vk: https://vk.com/usernickname
-social_link__tg: https://t.me/usernickname
-social_link__whatsapp: https://wa.me/79999999999
-social_link__github: https://github.com/usernickname
-social_link__skype: skype:live:usernickname?call
 ```
 
 **Don't forget to change your url before you deploy your site!**

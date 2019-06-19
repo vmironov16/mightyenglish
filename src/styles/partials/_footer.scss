@@ -1,5 +1,4 @@
-.footer
-{
+.footer {
     margin: $footer__margin;
     padding: $footer__padding;
 
@@ -8,12 +7,9 @@
     color: $footer__font-color;
     background: $footer__background-color;
 
-    &-icons
-    {
-        .social-icons
-        {
-            a
-            {
+    &-icons {
+        .social-icons {
+            a {
                 font-size: $footer__icon__font-size;
 
                 display: inline-block;
@@ -26,29 +22,25 @@
                 text-decoration: none;
 
 
-                .icon
-                {
+                .icon {
                     display: block;
 
                     color: $footer__icon__font-color;
                 }
 
-                &:hover
-                {
+                &:hover {
                     font-size: $footer__icon__font-size--hover;
 
                     margin-right: 6px;
                     padding: 0;
-                    .icon
-                    {
+
+                    .icon {
                         color: $footer__icon__font-color--hover;
                     }
                 }
 
-                &:active
-                {
-                    .icon
-                    {
+                &:active {
+                    .icon {
                         color: $footer__icon__font-color--active;
                     }
                 }
@@ -57,8 +49,7 @@
     }
 
 
-    p
-    {
+    p {
         margin-top: 0;
     }
 }

@@ -1,70 +1,64 @@
 button,
-.btn
-{
+.btn {
     display: inline-block;
 
     padding: $button__padding;
 
     -webkit-transition: 300ms;
-       -moz-transition: 300ms;
-        -ms-transition: 300ms;
-         -o-transition: 300ms;
-            transition: 300ms;
+    -moz-transition: 300ms;
+    -ms-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms;
 
     color: $button__font-color;
     border: $button__border;
     border-radius: $button__border-radius;
     background-color: $button__background-color;
-    &:hover
-    {
+
+    &:hover {
         cursor: pointer;
 
         color: $button__font-color--hover;
         background-color: $button--background-color--hover;
     }
-    &:active
-    {
+
+    &:active {
         color: $button__font-color--active;
         background-color: $button--background-color--active;
     }
+
     &:active,
-    &:focus
-    {
+    &:focus {
         outline: none;
     }
 }
 
-.header
-{
-    .btn
-    {
+.header {
+    .btn {
         padding: $header__button-primary__padding;
 
         transition: all 300ms;
 
         color: $header__button-primary__font-color;
         border: 2px solid $header__button-primary__font-color;
-        &:hover
-        {
+
+        &:hover {
             //  font-weight: 600;
             color: $header__button-primary__font-color;
             border-color: transparent;
             background-color: $header__button-primary__background-color--hover;
 
-            .icon
-            {
+            .icon {
                 color: $header__button-primary__font-color;
             }
         }
 
-        &:active
-        {
+        &:active {
             border-color: transparent;
             background-color: $header__button-primary__background-color--active;
         }
 
-        .icon
-        {
+        .icon {
             font-weight: 400;
 
             margin: 0 0 0 5px;
