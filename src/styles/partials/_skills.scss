@@ -18,8 +18,10 @@
             }
 
             .skill-content{
-                height: 440px;
-                overflow: auto;
+                @media only screen and (min-width: $display-mini__width) {
+                    height: 440px;
+                    overflow: auto;
+                }
             }
 
             .skill-logo-wrapper
