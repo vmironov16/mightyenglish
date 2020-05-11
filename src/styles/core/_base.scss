@@ -36,7 +36,7 @@ h1,
 h2,
 h3,
 h4,
-stong {
+strong {
     line-height: 1.25;
 
     margin-top: 1em;
@@ -45,13 +45,14 @@ stong {
     color: $font-color;
 }
 
-h1 {
+h1 {    
+    text-align: center;
     font-size: 2.5rem;
 
-    text-align: center;
 }
 
 h2 {
+    text-align: center;
     font-size: 2rem;
 }
 

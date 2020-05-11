@@ -1,41 +1,28 @@
-#about {
-    .img-me-wrapper {
+#about
+{
+    .img-me-wrapper
+    {
         display: block;
+        float: left;
         overflow: hidden;
 
         width: 200px;
         height: 200px;
-        margin: 20px 10px;
-        margin: 30px auto;
+        margin: 10px 25px;
 
         border-radius: 50%;
 
-        img {
+        @media only screen and (max-width: $display-mini__width)
+        {
+            float: unset;
+
+            margin: 0 auto;
+        }
+
+        img
+        {
             width: 100%;
             height: auto;
-        }
-    }
-
-    .content-me-wrapper {
-        padding: 0 10px;
-    }
-
-    .info-list {
-        overflow: auto;
-
-        margin-right: 0 !important;
-        margin-left: 0 !important;
-        padding: 10px 0;
-
-        text-align: left;
-
-        div {
-            padding-right: 10px !important;
-            padding-left: 0 !important;
-        }
-
-        span {
-            @extend .bold;
         }
     }
 }
