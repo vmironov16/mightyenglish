@@ -21,6 +21,7 @@ $body__font-color: #555;
 
 //Media queries
 $cut: 550px;
+$display-mini__width: 992px;
 
 //Links
 $link__font-color--hover: $sec-color;
@@ -100,9 +101,9 @@ $form__el__border-radius--focus: 5px;
 $form__el__padding--focus: 15px 10px;
 
 //Skills
-$skill__padding: 0 40px;
-$skill__icon__font-size: 80px;
-$skill__icon__margin-top: 40px;
+$skill__padding: 0 35px 40px;
+$skill__icon__font-size: 60px;
+$skill__icon__margin-top: 30px;
 $skill__icon__title__font-color--hover: $accent-color2;
 
 $skill__background-color--hover: $default-color--lighten;
