@@ -2,25 +2,51 @@
 {
     .skills-list
     {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
         .skill
         {
+            position: relative;
+            width: 50%;
             padding: $skill__padding;
-
             transition: 250ms;
+            &:last-child
+            {
+                width: 100%;
+                .skill-content
+                {
+                    @media only screen and (min-width: $display-mini__width)
+                    {
+                        height: auto;
+                    }
+                }
+            }
 
             h3
             {
-                padding-top: 0;
-                
                 height: 60px;
+                padding-top: 0;
 
                 text-align: center;
             }
 
-            .skill-content{
-                @media only screen and (min-width: $display-mini__width) {
-                    height: 440px;
+            .skill-content
+            {
+                @media only screen and (min-width: $display-mini__width)
+                {
                     overflow: auto;
+
+                    height: 440px;
                 }
             }
 

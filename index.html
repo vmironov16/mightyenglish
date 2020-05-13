@@ -1,3 +1,41 @@
 ---
+Title: "Главная"
 layout: default
 ---
+<section id="about">
+    {% assign aboutItems = site.about | sort: 'order' %}
+    {% for about in aboutItems %}
+    <div class="about-item">
+        <h2>{{ about.title }}</h2>
+        <div class="content">{{ about.content }}</div>
+    </div>
+    {% endfor %}
+</section>
+<section id="skills">
+    <div class="skills-list row">
+        {% assign skills = site.skills | sort: 'order' %}
+        {% for skill in skills %}
+        <div class="skill">
+            <div class="skill-logo-wrapper">
+                <i class="icon fas {{ skill.icon }}"></i>
+            </div>
+            <h3>{{ skill.title }}</h3>
+            <div class="skill-content">
+                {{ skill.content }}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<section id="form">
+    <h2>Спишемся?</h2>
+    <form method="POST" action={{site.form_post_link}}>
+        <input type="text" name="name" placeholder="Как к вам обращаться*" required>
+        <input type="email" name="email" placeholder="Ваш email*" required>
+        <input type="text" name="subject" placeholder="Тема*" required>
+        <textarea name="message" placeholder="Ваш месседж*" required></textarea>
+        <input type="tel" name="tel" placeholder="Ваш номер телефона">
+        <p class="hint">* Звездочкой отмечены обязательные поля</p>
+        <button type="submit">Отправить</button>
+    </form>
+</section>
