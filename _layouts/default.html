@@ -1,19 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 {% include head.html %}
-
 <body>
-    {% include header.html %}
+    <div id="particles-js">
+        <div class="header">
+            <div class="logo">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="flip-card-img-wrapper">
+                                <img src="assets/img/logo.jpg" alt=""></div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="flip-card-img-wrapper"><img src="assets/img/me-none-bg.png" alt="Рудольф Александрович"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1 class="site-title">
+                {{site.header_title_eng}}
+            </h1>
+            <span class="site-description">{{site.header_title_descr}}</span>
+        </div>
+    </div>
+    <a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
+    </div>
     <div class="content">
-        <section id="about">
-            {% include about.html %}
-        </section>      
-        <section id="skills">
-            {% include skills.html %}
-        </section>
-        <section id="form">
-            {% include form.html%}
-        </section>
         {{ content }}
     </div>
     {% include footer.html %}
