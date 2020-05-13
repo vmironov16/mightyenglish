@@ -1,5 +1,5 @@
 
-$flip-card__width: calc(#{$logo__width} - 10px);
+$flip-card__width: calc(#{$logo__width} - 12px);
 $flip-card__height: $flip-card__width;
 
 .header
@@ -21,7 +21,7 @@ $flip-card__height: $flip-card__width;
     {
         overflow: hidden;
 
-        margin: 0 auto;
+        margin: 0 auto .5rem;
 
         @media only screen and (min-width: $cut)
         {
@@ -33,6 +33,7 @@ $flip-card__height: $flip-card__width;
         {
             width: $flip-card__width;
             height: $flip-card__height;
+            margin: 0 auto;
 
             background-color: transparent;
 
@@ -94,60 +95,38 @@ $flip-card__height: $flip-card__width;
         }
     }
 
-    h1
-    {
-        padding-top: 0;
-    }
 
-    .site-title
+    h1.site-title
     {
         font-family: $header__site-title__font-family;
         font-weight: $header__site-title__font-weight;
         font-style: $header__site-title__font-style;
-        line-height: 1;
 
         display: block;
+
+        margin: 0;
+        padding-top: 0;
+
+        white-space: nowrap;
 
         color: $header__site-title__font-color;
 
         @media only screen and (min-width: $cut)
         {
-            margin: 0;
-
-            .site-title-ru
-            {
-                font-size: $header__site-title-ru__font-size;
-            }
-
-            .site-title-eng
-            {
-                font-size: $header__site-title-eng__font-size;
-            }
-        }
-
-        &-ru
-        {
-            font-size: $header__site-title-ru__font-size--small-screen;
-
-            display: none;
-
-            color: $header__site-title-ru__font-color;
-        }
-
-        &-eng
-        {
-            font-size: $header__site-title-eng__font-size--small-screen;
+            font-size: $header__site-title__font-size;
         }
     }
 
     .site-description
     {
-        font-size: 13px;
+        font-size: 15px;
         font-weight: 100;
         line-height: 1;
 
         display: block;
 
+        max-width: 500px;
+        margin: 0 auto;
         margin-top: 10px;
 
         color: #fff;
@@ -195,6 +174,10 @@ $flip-card__height: $flip-card__width;
 
     cursor: pointer;
     text-align: center;
+    @media only screen and (max-height: 520px)
+    {
+        bottom: 5px;
+    }
 
 
     .icon
