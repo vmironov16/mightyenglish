@@ -27,3 +27,9 @@ google-analytics:
   id: ""
 
 exclude: ['package.json', 'src' , 'node_modules']
+
+collections:
+  skills:
+    output: true
+  about:
+    output: true

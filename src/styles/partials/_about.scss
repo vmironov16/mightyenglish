@@ -1,28 +1,6 @@
 #about
 {
-    .img-me-wrapper
-    {
-        display: block;
-        float: left;
-        overflow: hidden;
 
-        width: 200px;
-        height: 200px;
-        margin: 10px 25px;
 
-        border-radius: 50%;
 
-        @media only screen and (max-width: $display-mini__width)
-        {
-            float: unset;
-
-            margin: 0 auto;
-        }
-
-        img
-        {
-            width: 100%;
-            height: auto;
-        }
-    }
 }
