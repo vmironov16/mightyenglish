@@ -20,6 +20,12 @@
             width: 50%;
             padding: $skill__padding;
             transition: 250ms;
+
+            @media only screen and (max-width: $display-mini__width)
+            {
+                width: 100%;
+            }
+
             &:last-child
             {
                 width: 100%;
