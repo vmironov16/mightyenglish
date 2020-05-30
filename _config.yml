@@ -18,15 +18,15 @@ social_link__tel: tel:+79518943056
 social_link__email: mailto:ladnerrudolf@mail.ru
 social_link__vk: https://vk.com/ladnerrudolf
 social_link__whatsapp: https://wa.me/79518943056
+social_link__instagram: https://www.instagram.com/mighty_teacher/
 
-
-footer_text: Авторский курс английского языка "Mighty English" 
+footer_text: Авторский курс английского языка "Mighty English"
 
 # Google-analytics
 google-analytics:
   id: ""
 
-exclude: ['package.json', 'src' , 'node_modules']
+exclude: ["package.json", "src", "node_modules"]
 
 collections:
   skills:
