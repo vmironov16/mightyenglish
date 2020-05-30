@@ -26,6 +26,8 @@ footer_text: Авторский курс английского языка "Migh
 google-analytics:
   id: ""
 
+livereload: true
+
 exclude: ["package.json", "src", "node_modules"]
 
 collections:
