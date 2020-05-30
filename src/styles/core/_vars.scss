@@ -31,7 +31,7 @@ $link__font-color--active: $accent-color;
 $button__background-color: $main-color;
 $button__font-color: #FFF;
 $button__border: none;
-$button__padding: 10px 20px;  
+$button__padding: 10px 20px;
 $button__border-radius: 50px;
 
 $button--background-color--hover: $accent-color;
@@ -43,7 +43,7 @@ $button__font-color--active: #FFF;
 //Header
 $header__button-primary-primary__background-color: $button__background-color;
 $header__button-primary__font-color: #FFF;
-$header__button-primary__padding: 10px 20px 12px; 
+$header__button-primary__padding: 10px 20px 12px;
 $header__button-primary__background-color--hover: $accent-color;
 $header__button-primary__background-color--active: $accent-color;
 
@@ -67,7 +67,7 @@ $particles-js__background-color: $main-color;
 
 //Logo
 $logo__height:300px;
-$logo__width: $logo__height; 
+$logo__width: $logo__height;
 $logo__background-color: #FFF;
 $logo__img__padding: 20px;
 
@@ -113,8 +113,10 @@ $footer__padding: 30px;
 
 $footer__icon__font-color: #FFF;
 $footer__icon__font-size: 30px;
-$footer__icon__margin-right: 20px;
+$footer__icon__margin: 0 8px;
 
-$footer__icon__font-size--hover: 40px;
+$footer__icon__height: 40px;
+$footer__icon__width: $footer__icon__height;
+$footer__icon__font-size--hover: $footer__icon__height;
 $footer__icon__font-color--hover: $accent-color2;
 $footer__icon__font-color--active: $accent-color;
