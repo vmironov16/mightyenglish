@@ -10,31 +10,35 @@
     &-icons {
         .social-icons {
             a {
-                font-size: $footer__icon__font-size;
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
 
                 display: inline-block;
 
-                margin-right: $footer__icon__margin-right;
-                padding: 5px 0;
+                margin: $footer__icon__margin;
 
-                transition: 100ms;
-                vertical-align: middle;
                 text-decoration: none;
-
+                height: $footer__icon__height;
+                width: $footer__icon__width;
+                line-height: $footer__icon__height;
 
                 .icon {
-                    display: block;
+                    display: inline-block;
+                    transition: 100ms;
+                    font-size: $footer__icon__font-size;
 
                     color: $footer__icon__font-color;
+                    vertical-align: middle;
                 }
 
                 &:hover {
-                    font-size: $footer__icon__font-size--hover;
-
-                    margin-right: 6px;
-                    padding: 0;
-
                     .icon {
+                        font-size: $footer__icon__font-size--hover;
                         color: $footer__icon__font-color--hover;
                     }
                 }
