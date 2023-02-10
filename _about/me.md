@@ -3,7 +3,7 @@ title: "Обо мне"
 order: 1
 ---
 <div class="img-circle">
-    <img src="/assets/img/me.jpg" alt="Рудольф Александрович">
+    <img src="assets/img/me.jpg" alt="Рудольф Александрович">
 </div> 
 
 
