@@ -1,0 +1,89 @@
+---
+interface Props {
+  formspreeUrl: string;
+}
+const { formspreeUrl } = Astro.props;
+---
+<section id="contact" class="py-24 px-4 bg-white md:py-16">
+  <div class="w-[90%] max-w-site mx-auto">
+    <h2 class="text-[2rem] font-bold text-center text-primary mb-3 fade-in sm:text-[1.6rem]">
+      Запишитесь на урок
+    </h2>
+    <p class="text-center text-site-muted text-[1.1rem] mb-8 fade-in">
+      Оставьте заявку — я свяжусь с вами в ближайшее время
+    </p>
+    <form
+      class="max-w-[600px] mx-auto fade-in"
+      method="POST"
+      action={formspreeUrl}
+    >
+      <div class="grid grid-cols-1 gap-4 min-[576px]:grid-cols-2">
+        <input
+          type="text"
+          name="name"
+          placeholder="Как к вам обращаться*"
+          required
+          class="field"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Ваш email*"
+          required
+          class="field"
+        />
+      </div>
+      <input
+        type="text"
+        name="subject"
+        placeholder="Тема*"
+        required
+        class="field w-full"
+      />
+      <textarea
+        name="message"
+        placeholder="Ваше сообщение*"
+        required
+        class="field w-full h-[140px] resize-y"
+      ></textarea>
+      <input
+        type="tel"
+        name="tel"
+        placeholder="Телефон (необязательно)"
+        class="field w-full"
+      />
+      <p class="text-[0.85rem] text-site-muted mb-5">* Обязательные поля</p>
+      <button
+        type="submit"
+        class="inline-block px-10 py-3.5 rounded-full font-medium bg-primary text-white border-2 border-primary transition-all duration-200 hover:bg-accent hover:border-accent hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(91,85,208,0.4)] cursor-pointer text-base"
+      >
+        Отправить
+      </button>
+    </form>
+  </div>
+</section>
+
+<style>
+  .field {
+    width: 100%;
+    font-family: 'Jost', sans-serif;
+    font-size: 1rem;
+    color: #1a1a2e;
+    background: #f8f7ff;
+    border: 1px solid #e5e0f5;
+    border-radius: 12px;
+    padding: 0.875rem 1rem;
+    margin-bottom: 1rem;
+    outline: none;
+    appearance: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+  .field::placeholder {
+    color: #6b7280;
+  }
+  .field:focus {
+    border-color: #5b55d0;
+    box-shadow: 0 0 0 3px rgba(91, 85, 208, 0.12);
+    background: #fff;
+  }
+</style>

@@ -1,0 +1,119 @@
+---
+interface Props {
+  siteTitle: string;
+}
+const { siteTitle } = Astro.props;
+---
+<nav class="nav" id="nav">
+  <a href="#" class="nav-logo">{siteTitle}</a>
+
+  <button class="nav-toggle" id="nav-toggle" aria-label="Открыть меню">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="nav-links" id="nav-links">
+    <a href="#about">О курсе</a>
+    <a href="#skills">Методология</a>
+    <a href="#contact">Контакт</a>
+  </div>
+</nav>
+
+<style>
+  .nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 2rem;
+    transition: background 0.25s ease, box-shadow 0.25s ease, padding 0.25s ease;
+  }
+
+  .nav.scrolled {
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 2px 8px rgba(50, 45, 107, 0.08);
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .nav-logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: -0.02em;
+    transition: color 0.25s ease;
+  }
+  .nav.scrolled .nav-logo { color: #322d6b; }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  .nav-links a {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 0.25s ease;
+  }
+  .nav-links a:hover { color: #fff; }
+  .nav.scrolled .nav-links a { color: #1a1a2e; }
+  .nav.scrolled .nav-links a:hover { color: #5b55d0; }
+
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 24px; height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    transition: all 0.25s ease;
+  }
+  .nav.scrolled .nav-toggle span { background: #322d6b; }
+
+  @media (max-width: 768px) {
+    .nav { padding: 1rem 1.25rem; }
+    .nav.scrolled { padding: 0.75rem 1.25rem; }
+
+    .nav-toggle { display: flex; }
+
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%; left: 0; right: 0;
+      flex-direction: column;
+      gap: 0;
+      background: #322d6b;
+      padding: 1rem 0;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a {
+      padding: 0.75rem 1.5rem;
+      color: rgba(255, 255, 255, 0.9);
+    }
+    .nav-links a:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .nav.scrolled .nav-links {
+      background: #fff;
+      box-shadow: 0 4px 20px rgba(50, 45, 107, 0.12);
+    }
+    .nav.scrolled .nav-links a { color: #1a1a2e; }
+    .nav.scrolled .nav-links a:hover {
+      color: #5b55d0;
+      background: #f8f7ff;
+    }
+  }
+</style>

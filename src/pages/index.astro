@@ -1,0 +1,44 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Skills from '../components/Skills.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import settings from '../../_data/settings.yml';
+
+const about = (await getCollection('about')).sort((a, b) => a.data.order - b.data.order);
+const skills = (await getCollection('skills')).sort((a, b) => a.data.order - b.data.order);
+---
+<Layout title={settings.site_title} description={settings.description}>
+  <!-- Hero / header -->
+  <header
+    class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 pt-20 pb-16"
+    style="background: linear-gradient(135deg, #322d6b 0%, #5b55d0 60%, #8b87e0 100%);"
+  >
+    <!-- Mesh overlay -->
+    <div
+      class="absolute inset-0 pointer-events-none"
+      style="background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.06) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(255,255,255,0.04) 0%, transparent 50%);"
+    ></div>
+
+    <Nav siteTitle={settings.site_title} />
+    <Hero siteTitle={settings.site_title} subtitle={settings.header_subtitle} />
+  </header>
+
+  <main>
+    <About entries={about} />
+    <Skills entries={skills} />
+    <Contact formspreeUrl={settings.formspree_url} />
+  </main>
+
+  <Footer
+    footerText={settings.footer_text}
+    email={settings.email}
+    vk={settings.vk}
+    whatsapp={settings.whatsapp}
+    telegram={settings.telegram}
+  />
+</Layout>

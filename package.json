@@ -1,10 +1,19 @@
 {
   "name": "mightyenglish",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Mighty English — авторский курс английского языка",
+  "type": "module",
   "scripts": {
-    "serve": "bundle exec jekyll serve --livereload --open-url",
-    "build": "JEKYLL_ENV=production bundle exec jekyll build"
+    "dev": "astro dev",
+    "serve": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^6.0.2",
+    "@rollup/plugin-yaml": "^4.0.4",
+    "astro": "^6.0.8",
+    "tailwindcss": "^3.4.0"
   },
   "author": "Rudolf Ladner"
 }

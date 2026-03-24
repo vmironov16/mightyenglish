@@ -1,12 +1,12 @@
 media:
-  input: assets/img
+  input: public/assets/img
   output: /assets/img
 
 content:
   - name: about
     label: О себе и курсе
     type: collection
-    path: _about
+    path: src/content/about
     fields:
       - name: title
         label: Заголовок
@@ -21,7 +21,7 @@ content:
   - name: skills
     label: Структура курса
     type: collection
-    path: _skills
+    path: src/content/skills
     fields:
       - name: title
         label: Заголовок
@@ -30,8 +30,20 @@ content:
         label: Порядок отображения
         type: number
       - name: icon
-        label: "Иконка Font Awesome (например: fa-book)"
-        type: string
+        label: Иконка
+        type: select
+        options:
+          values:
+            - { label: "Книга", value: "fa-book" }
+            - { label: "Мозг / Знания", value: "fa-brain" }
+            - { label: "Игра / Практика", value: "fa-gamepad" }
+            - { label: "Список тем", value: "fa-list-check" }
+            - { label: "Планирование", value: "fa-calendar-alt" }
+            - { label: "Разговор", value: "fa-comments" }
+            - { label: "Звезда", value: "fa-star" }
+            - { label: "Цель", value: "fa-bullseye" }
+            - { label: "Карандаш", value: "fa-pencil-alt" }
+            - { label: "Учёба", value: "fa-graduation-cap" }
       - name: body
         label: Содержимое
         type: rich-text
