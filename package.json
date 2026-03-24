@@ -1,22 +1,10 @@
 {
-  "name": "particle",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "mightyenglish",
+  "version": "2.0.0",
+  "description": "Mighty English — авторский курс английского языка",
   "scripts": {
-    "dev": "concurrently \"jekyll serve -l -o\" \"gulp\""
+    "serve": "bundle exec jekyll serve --livereload --open-url",
+    "build": "JEKYLL_ENV=production bundle exec jekyll build"
   },
-  "author": "Vladislav Mironov based on Jekyll Particle Theme by Nathan Randecker",
-  "license": "ISC",
-  "dependencies": {
-    "concurrently": "^5.2.0",
-    "gulp": "^4.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-csso": "^3.0.1",
-    "gulp-imagemin": "^5.0.3",
-    "gulp-plumber": "^1.2.1",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify": "^3.0.1"
-  }
+  "author": "Rudolf Ladner"
 }

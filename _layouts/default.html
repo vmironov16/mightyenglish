@@ -1,34 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 {% include head.html %}
-
 <body>
-    <div id="particles-js">
-        <div class="header">
-            <div class="logo">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <div class="flip-card-img-wrapper">
-                                <img src="assets/img/logomin.jpg" alt=""></div>
-                        </div>
-                        <div class="flip-card-back">
-                            <div class="flip-card-img-wrapper"><img src="assets/img/me-none-bg.jpg"
-                                    alt="Рудольф Александрович"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <h1 class="site-title">
-                {{site.header_title_eng}}
-            </h1>
-            <span class="site-description">{{site.header_title_descr}}</span>
+
+  <header class="hero">
+    <nav class="nav" id="nav">
+      <a class="nav-logo" href="#">{{ site.title }}</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="#about">О курсе</a>
+        <a href="#skills">Методология</a>
+        <a href="#contact">Контакт</a>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <div class="hero-avatar">
+        <div class="hero-avatar-flip">
+          <div class="hero-avatar-front">
+            <img src="/assets/img/logomin.jpg" alt="Mighty English">
+          </div>
+          <div class="hero-avatar-back">
+            <img src="/assets/img/me-none-bg.jpg" alt="Рудольф Ладнер">
+          </div>
         </div>
+      </div>
+      <div class="hero-text">
+        <h1>{{ site.title }}</h1>
+        <p>{{ site.data.settings.header_subtitle }}</p>
+        <a href="#about" class="btn btn-outline">Узнать больше</a>
+        <a href="#contact" class="btn btn-primary">Записаться</a>
+      </div>
     </div>
-    <a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
-    </div>
-    <div class="content">
-        {{ content }}
-    </div>
-    {% include footer.html %}
+
+    <a class="hero-scroll" href="#about" aria-label="Прокрутить вниз">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+
+  <script src="/assets/js/main.js"></script>
 </body>
+</html>

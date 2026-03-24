@@ -1,41 +1,52 @@
 ---
-Title: "Главная"
+title: "Главная"
 layout: default
 ---
-<section id="about">
+
+<section id="about" class="section section-about">
+  <div class="container">
     {% assign aboutItems = site.about | sort: 'order' %}
     {% for about in aboutItems %}
-    <div class="about-item">
-        <h2>{{ about.title }}</h2>
-        <div class="content">{{ about.content }}</div>
+    <div class="about-item fade-in">
+      <h2>{{ about.title }}</h2>
+      <div class="about-content">{{ about.content }}</div>
     </div>
     {% endfor %}
+  </div>
 </section>
-<section id="skills">
-    <div class="skills-list row">
-        {% assign skills = site.skills | sort: 'order' %}
-        {% for skill in skills %}
-        <div class="skill">
-            <div class="skill-logo-wrapper">
-                <i class="icon fas {{ skill.icon }}"></i>
-            </div>
-            <h3>{{ skill.title }}</h3>
-            <div class="skill-content">
-                {{ skill.content }}
-            </div>
+
+<section id="skills" class="section section-skills">
+  <div class="container">
+    <h2 class="section-title fade-in">Как проходит занятие</h2>
+    <div class="skills-grid">
+      {% assign skills = site.skills | sort: 'order' %}
+      {% for skill in skills %}
+      <div class="skill-card fade-in">
+        <div class="skill-icon">
+          <i class="fas {{ skill.icon }}"></i>
         </div>
-        {% endfor %}
+        <h3>{{ skill.title }}</h3>
+        <div class="skill-body">{{ skill.content }}</div>
+      </div>
+      {% endfor %}
     </div>
+  </div>
 </section>
-<section id="form">
-    <h2>Спишемся?</h2>
-    <form method="POST" action={{site.form_post_link}}>
-        <input type="text" name="name" placeholder="Как к Вам обращаться*" required>
+
+<section id="contact" class="section section-contact">
+  <div class="container">
+    <h2 class="section-title fade-in">Запишитесь на урок</h2>
+    <p class="section-subtitle fade-in">Оставьте заявку — я свяжусь с вами в ближайшее время</p>
+    <form class="contact-form fade-in" method="POST" action="{{ site.data.settings.formspree_url }}">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Как к вам обращаться*" required>
         <input type="email" name="email" placeholder="Ваш email*" required>
-        <input type="text" name="subject" placeholder="Тема*" required>
-        <textarea name="message" placeholder="Ваш месседж*" required></textarea>
-        <input type="tel" name="tel" placeholder="Ваш номер телефона">
-        <p class="hint">* Звездочкой отмечены обязательные поля</p>
-        <button type="submit">Отправить</button>
+      </div>
+      <input type="text" name="subject" placeholder="Тема*" required>
+      <textarea name="message" placeholder="Ваше сообщение*" required></textarea>
+      <input type="tel" name="tel" placeholder="Телефон (необязательно)">
+      <p class="form-hint">* Обязательные поля</p>
+      <button type="submit" class="btn btn-primary">Отправить</button>
     </form>
+  </div>
 </section>

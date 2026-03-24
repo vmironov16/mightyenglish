@@ -1,0 +1,73 @@
+media:
+  input: assets/img
+  output: /assets/img
+
+content:
+  - name: about
+    label: О себе и курсе
+    type: collection
+    path: _about
+    fields:
+      - name: title
+        label: Заголовок
+        type: string
+      - name: order
+        label: Порядок отображения
+        type: number
+      - name: body
+        label: Содержимое
+        type: rich-text
+
+  - name: skills
+    label: Структура курса
+    type: collection
+    path: _skills
+    fields:
+      - name: title
+        label: Заголовок
+        type: string
+      - name: order
+        label: Порядок отображения
+        type: number
+      - name: icon
+        label: "Иконка Font Awesome (например: fa-book)"
+        type: string
+      - name: body
+        label: Содержимое
+        type: rich-text
+
+  - name: settings
+    label: Настройки сайта
+    type: file
+    path: _data/settings.yml
+    fields:
+      - name: site_title
+        label: Название сайта
+        type: string
+      - name: header_subtitle
+        label: Подзаголовок на главной
+        type: string
+      - name: description
+        label: Описание (для SEO)
+        type: string
+      - name: footer_text
+        label: Текст в подвале
+        type: string
+      - name: email
+        label: Email
+        type: string
+      - name: phone
+        label: Телефон
+        type: string
+      - name: vk
+        label: Ссылка VK
+        type: string
+      - name: whatsapp
+        label: Ссылка WhatsApp
+        type: string
+      - name: telegram
+        label: Ссылка Telegram
+        type: string
+      - name: formspree_url
+        label: Formspree URL (для формы обратной связи)
+        type: string
