@@ -1,0 +1,73 @@
+---
+const tg = "https://t.me/Mighty_Teacher";
+const items = [
+  {
+    q: "Подойдёт ли мне курс, если у меня нулевой уровень?",
+    a: "Возраст участников и уровень языка не ограничены. Если есть желание — разберёмся вместе. Я работал с самыми разными аудиториями: от детских садов до студентов университетов."
+  },
+  {
+    q: "Чем Мощный курс отличается от обычных курсов?",
+    a: "Закрытая Telegram-группа с 4 вкладками: видеоуроки и тесты, чат на русском (голосовые и кружочки от меня лично), чат на английском (практика и игры), дополнительные материалы. После потока доступ сохраняется целый год — ничего не сгорит."
+  },
+  {
+    q: "Сколько времени нужно уделять?",
+    a: "Поток длится 1 месяц. Каждый понедельник — новые видео и тесты. Темп выбираешь сам. Если не успел — все материалы доступны ещё год, пересмотришь в удобное время."
+  },
+  {
+    q: "Можно ли заниматься из другого города или страны?",
+    a: "Мощный курс и Speaking Club — онлайн, из любой точки мира. Очные форматы (Театр, Паркур, квизы) — Набережные Челны и Казань."
+  },
+  {
+    q: "Готовишь к IELTS, TOEFL, ЕГЭ?",
+    a: "Да: IELTS, TOEFL, ОГЭ, ЕГЭ, сертификаты EF и Duolingo. Уточни в Telegram какой формат тебе нужен — подберём подходящий."
+  },
+  {
+    q: "Что если я пропущу неделю на Мощном курсе?",
+    a: "Все видео и тесты остаются в группе. Доступ сохраняется год после потока — ничего не сгорит, можно вернуться и пересмотреть в любое время."
+  },
+];
+---
+<section class="me-section" id="faq" style="background: var(--color-surface-card)">
+  <div class="me-container">
+    <div class="me-section__head">
+      <div class="me-eyebrow">вопросы</div>
+      <h2>Что обычно спрашивают перед записью</h2>
+      <p>Всё, чего нет в списке, — пиши в Telegram. Отвечаю в течение дня, без скрипта.</p>
+    </div>
+
+    <div class="me-faq__layout">
+      <aside class="me-faq__aside">
+        <img src="/assets/img/rudolf-cartoon-standing.jpg" alt="Рудольф" loading="lazy" />
+        <h3>Чего‑то нет?</h3>
+        <p>Напиши вопрос в <a href={tg} target="_blank" rel="noopener noreferrer" style="color:var(--color-accent)">Telegram</a> — отвечу сегодня, без шаблонов.</p>
+      </aside>
+
+      <div class="me-faq__list">
+        {items.map((item, i) => (
+          <div class={`me-faq__item${i === 0 ? " me-faq__item--open" : ""}`} data-faq>
+            <div class="me-faq__q">
+              <span>{item.q}</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.4" stroke-linecap="round" aria-hidden="true">
+                <path d="M12 5V19M5 12H19"/>
+              </svg>
+            </div>
+            <div class="me-faq__a"><p>{item.a}</p></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+(function () {
+  var items = document.querySelectorAll('[data-faq]');
+  items.forEach(function (item) {
+    item.querySelector('.me-faq__q').addEventListener('click', function () {
+      var isOpen = item.classList.contains('me-faq__item--open');
+      items.forEach(function (el) { el.classList.remove('me-faq__item--open'); });
+      if (!isOpen) item.classList.add('me-faq__item--open');
+    });
+  });
+})();
+</script>

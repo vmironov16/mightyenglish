@@ -1,0 +1,258 @@
+---
+---
+<div class="me-cookie-banner" id="me-cookie-banner" role="dialog" aria-label="Согласие на использование cookie" aria-live="polite" hidden>
+  <div class="me-cookie-banner__inner">
+    <div class="me-cookie-banner__text">
+      <strong>Мы используем cookie</strong>
+      <p>
+        Сайт использует технические cookie, необходимые для работы. С вашего согласия —
+        также аналитические cookie (Яндекс.Метрика) для улучшения сайта. Продолжение
+        просмотра без выбора не является согласием.
+        <a href="/policy#cookie" class="me-cookie-banner__link">Подробнее в Политике ПДн</a>
+      </p>
+    </div>
+    <div class="me-cookie-banner__actions">
+      <button class="me-cookie-btn me-cookie-btn--accept" id="me-cookie-accept">
+        Принять все
+      </button>
+      <button class="me-cookie-btn me-cookie-btn--necessary" id="me-cookie-necessary">
+        Только необходимые
+      </button>
+      <button class="me-cookie-btn me-cookie-btn--settings" id="me-cookie-settings">
+        Настроить
+      </button>
+    </div>
+  </div>
+
+  <div class="me-cookie-settings" id="me-cookie-settings-panel" hidden>
+    <div class="me-cookie-settings__row">
+      <div class="me-cookie-settings__info">
+        <span class="me-cookie-settings__name">Технические (обязательные)</span>
+        <span class="me-cookie-settings__desc">Необходимы для работы сайта. Не могут быть отключены.</span>
+      </div>
+      <label class="me-cookie-switch me-cookie-switch--disabled" aria-label="Технические cookie (обязательные)">
+        <input type="checkbox" checked disabled />
+        <span class="me-cookie-switch__track"></span>
+      </label>
+    </div>
+    <div class="me-cookie-settings__row">
+      <div class="me-cookie-settings__info">
+        <span class="me-cookie-settings__name">Аналитические (Яндекс.Метрика)</span>
+        <span class="me-cookie-settings__desc">Помогают понять, как посетители используют сайт. Данные хранятся на серверах в РФ.</span>
+      </div>
+      <label class="me-cookie-switch" aria-label="Аналитические cookie">
+        <input type="checkbox" id="me-cookie-analytics" />
+        <span class="me-cookie-switch__track"></span>
+      </label>
+    </div>
+    <button class="me-cookie-btn me-cookie-btn--accept" id="me-cookie-save-settings">
+      Сохранить настройки
+    </button>
+  </div>
+</div>
+
+<style>
+  .me-cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: var(--color-surface-dark);
+    color: var(--color-on-surface-dark);
+    padding: 20px 24px;
+    box-shadow: 0 -4px 24px rgba(0,0,0,0.18);
+  }
+  .me-cookie-banner[hidden] { display: none; }
+  .me-cookie-banner__inner {
+    max-width: var(--container);
+    margin: 0 auto;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .me-cookie-banner__text {
+    flex: 1;
+    min-width: 240px;
+  }
+  .me-cookie-banner__text strong {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+  .me-cookie-banner__text p {
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.8);
+    margin: 0 !important;
+  }
+  .me-cookie-banner__link {
+    color: var(--color-gold);
+    text-underline-offset: 3px;
+  }
+  .me-cookie-banner__actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .me-cookie-btn {
+    padding: 9px 18px;
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: opacity 180ms;
+  }
+  .me-cookie-btn:hover { opacity: 0.85; }
+  .me-cookie-btn--accept {
+    background: var(--color-primary);
+    color: #fff;
+  }
+  .me-cookie-btn--necessary {
+    background: transparent;
+    color: rgba(255,255,255,0.75);
+    border: 1px solid rgba(255,255,255,0.3);
+  }
+  .me-cookie-btn--settings {
+    background: transparent;
+    color: rgba(255,255,255,0.55);
+    font-weight: 400;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .me-cookie-settings {
+    max-width: var(--container);
+    margin: 16px auto 0;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .me-cookie-settings[hidden] { display: none; }
+  .me-cookie-settings__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .me-cookie-settings__info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .me-cookie-settings__name { font-size: 0.875rem; font-weight: 600; }
+  .me-cookie-settings__desc { font-size: 0.75rem; color: rgba(255,255,255,0.55); }
+
+  /* Toggle switch */
+  .me-cookie-switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+  .me-cookie-switch--disabled { cursor: not-allowed; opacity: 0.5; }
+  .me-cookie-switch input { position: absolute; opacity: 0; width: 0; height: 0; }
+  .me-cookie-switch__track {
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.2);
+    transition: background 200ms;
+  }
+  .me-cookie-switch__track::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #fff;
+    transition: transform 200ms var(--ease-out, ease);
+  }
+  .me-cookie-switch input:checked + .me-cookie-switch__track {
+    background: var(--color-accent);
+  }
+  .me-cookie-switch input:checked + .me-cookie-switch__track::before {
+    transform: translateX(20px);
+  }
+  @media (max-width: 600px) {
+    .me-cookie-banner__inner { flex-direction: column; }
+    .me-cookie-banner__actions { width: 100%; }
+  }
+</style>
+
+<script is:inline>
+(function () {
+  var STORAGE_KEY = 'me_cookie_consent';
+  var banner = document.getElementById('me-cookie-banner');
+  var settingsPanel = document.getElementById('me-cookie-settings-panel');
+
+  function logConsent(type) {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({ type: type, ts: Date.now() }));
+    } catch (e) {}
+  }
+
+  function setBodyPadding(height) {
+    document.body.style.paddingBottom = height ? height + 'px' : '';
+  }
+
+  function hideBanner() {
+    banner.setAttribute('hidden', '');
+    setBodyPadding(0);
+  }
+
+  function hasConsent() {
+    try { return !!localStorage.getItem(STORAGE_KEY); } catch (e) { return false; }
+  }
+
+  if (hasConsent()) return;
+
+  banner.removeAttribute('hidden');
+
+  // Push body down by full banner height (offsetHeight = content + padding + border)
+  // Update whenever the banner resizes (settings panel opens, viewport changes, etc.)
+  function syncPadding() {
+    setBodyPadding(banner.offsetHeight);
+  }
+
+  if (typeof ResizeObserver !== 'undefined') {
+    var ro = new ResizeObserver(syncPadding);
+    ro.observe(banner);
+  } else {
+    syncPadding();
+    window.addEventListener('resize', syncPadding);
+  }
+
+  document.getElementById('me-cookie-accept').addEventListener('click', function () {
+    logConsent('all');
+    hideBanner();
+  });
+
+  document.getElementById('me-cookie-necessary').addEventListener('click', function () {
+    logConsent('necessary');
+    hideBanner();
+  });
+
+  document.getElementById('me-cookie-settings').addEventListener('click', function () {
+    settingsPanel.removeAttribute('hidden');
+  });
+
+  document.getElementById('me-cookie-save-settings').addEventListener('click', function () {
+    var analytics = document.getElementById('me-cookie-analytics').checked;
+    logConsent(analytics ? 'all' : 'necessary');
+    hideBanner();
+  });
+})();
+</script>

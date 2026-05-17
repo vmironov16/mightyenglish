@@ -1,0 +1,32 @@
+---
+import '../styles/global.css';
+import '../styles/tokens.css';
+import '../styles/landing.css';
+import CookieBanner from '../components/CookieBanner.astro';
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = 'Мощный английский', description = 'Авторская школа английского языка Рудольфа Ладнера' } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#322D6B" />
+    <meta name="description" content={description} />
+    <link rel="shortcut icon" href="/assets/img/english.png" type="image/x-icon" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+    <CookieBanner />
+    <script>
+      if (import.meta.env.DEV) {
+        import('../components/agentation-init');
+      }
+    </script>
+  </body>
+</html>

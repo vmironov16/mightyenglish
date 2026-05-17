@@ -1,22 +1,29 @@
 {
-  "name": "particle",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "mightyenglish",
+  "version": "3.0.0",
+  "description": "Mighty English — авторский курс английского языка",
+  "type": "module",
   "scripts": {
-    "dev": "concurrently \"jekyll serve -l -o\" \"gulp\""
+    "dev": "astro dev",
+    "dev:all": "npx agentation-mcp server & astro dev",
+    "serve": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
-  "author": "Vladislav Mironov based on Jekyll Particle Theme by Nathan Randecker",
-  "license": "ISC",
   "dependencies": {
-    "concurrently": "^5.2.0",
-    "gulp": "^4.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-csso": "^3.0.1",
-    "gulp-imagemin": "^5.0.3",
-    "gulp-plumber": "^1.2.1",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify": "^3.0.1"
+    "@astrojs/react": "^5.0.5",
+    "@astrojs/tailwind": "^6.0.2",
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/lora": "^5.2.8",
+    "@fontsource/unbounded": "^5.2.8",
+    "@rollup/plugin-yaml": "^4.0.4",
+    "astro": "^6.0.8",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "tailwindcss": "^3.4.0"
+  },
+  "author": "Rudolf Ladner",
+  "devDependencies": {
+    "agentation": "^3.0.2"
   }
 }

@@ -3,3 +3,19 @@ _site
 node_modules
 .DS_STORE
 .idea
+dist/
+.astro/
+
+# Teacher's private content — never commit
+requirements/
+Canals and courses/
+
+# Claude Code / AI planning — never commit
+.claude/
+AGENTS.md
+DESIGN.md
+README.md
+.pages.yml
+_data/
+docs/superpowers/
+docs/AGENTATION-SETUP.md
