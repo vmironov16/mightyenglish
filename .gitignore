@@ -5,3 +5,7 @@ node_modules
 .idea
 dist/
 .astro/
+
+# Teacher's private content — never commit
+requirements/
+Canals and courses/
