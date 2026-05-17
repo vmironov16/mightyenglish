@@ -12,6 +12,7 @@ Canals and courses/
 
 # Claude Code / AI planning — never commit
 .claude/
+CLAUDE.md
 AGENTS.md
 DESIGN.md
 README.md
