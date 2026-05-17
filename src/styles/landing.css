@@ -224,7 +224,7 @@ a { color: inherit; }
 /* ---- FAQ ---- */
 .me-faq__layout { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: start; }
 @media (min-width: 1024px) { .me-faq__layout { grid-template-columns: 4fr 8fr; gap: 64px; } }
-.me-faq__aside img { display: block; width: 100%; max-width: 320px; margin: 0 auto; }
+.me-faq__aside img { display: block; width: auto; max-width: 320px; margin: 0 auto; height: 356px }
 .me-faq__aside h3 { font-size: 24px; margin-bottom: 12px; text-align: center; }
 .me-faq__aside p { font-family: var(--font-body); font-size: 15px; color: var(--color-on-surface-variant); line-height: 1.55; text-align: center; max-width: 280px; margin: 0 auto; }
 .me-faq__list { display: flex; flex-direction: column; }
