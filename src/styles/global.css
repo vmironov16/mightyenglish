@@ -2,7 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "./tokens.css";
-@import "./landing.css";
-
 html { scroll-behavior: smooth; }
