@@ -9,3 +9,13 @@ dist/
 # Teacher's private content — never commit
 requirements/
 Canals and courses/
+
+# Claude Code / AI planning — never commit
+.claude/
+AGENTS.md
+DESIGN.md
+README.md
+.pages.yml
+_data/
+docs/superpowers/
+docs/AGENTATION-SETUP.md
