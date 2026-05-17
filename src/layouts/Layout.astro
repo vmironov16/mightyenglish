@@ -6,26 +6,19 @@ interface Props {
   description?: string;
 }
 
-const { title = 'Mighty English', description = 'Курсы английского языка' } = Astro.props;
+const { title = 'Мощный английский', description = 'Авторская школа английского языка Рудольфа Ладнера' } = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#322d6b" />
+    <meta name="theme-color" content="#322D6B" />
     <meta name="description" content={description} />
     <link rel="shortcut icon" href="/assets/img/english.png" type="image/x-icon" />
     <title>{title}</title>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      crossorigin="anonymous"
-    />
   </head>
   <body>
     <slot />
-    <script src="/assets/js/main.js" is:inline></script>
   </body>
 </html>
