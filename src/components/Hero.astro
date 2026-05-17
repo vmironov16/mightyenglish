@@ -1,5 +1,6 @@
 ---
 const tg = "https://t.me/Mighty_Teacher";
+const base = import.meta.env.BASE;
 ---
 <section class="me-hero" id="top">
   <div class="me-container">
@@ -36,7 +37,7 @@ const tg = "https://t.me/Mighty_Teacher";
         <span class="me-hero__photo-tag">
           <span class="dot"></span>идёт набор · осень 2026
         </span>
-        <img src="/assets/img/rudolf-warm.png" alt="Рудольф Ладнер" loading="eager" />
+        <img src={`${base}assets/img/rudolf-warm.png`} alt="Рудольф Ладнер" loading="eager" />
       </div>
     </div>
   </div>

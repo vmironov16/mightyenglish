@@ -1,5 +1,6 @@
 ---
 const tg = "https://t.me/Mighty_Teacher";
+const base = import.meta.env.BASE;
 const steps = [
   {
     n: "01",
@@ -62,7 +63,7 @@ const steps = [
           </span>
         </a>
       </div>
-      <img src="/assets/img/rudolf-cartoon-chalkboard.jpg" alt="Рудольф у доски" loading="lazy" />
+      <img src={`${base}assets/img/rudolf-cartoon-chalkboard.jpg`} alt="Рудольф у доски" loading="lazy" />
     </div>
   </div>
 </section>

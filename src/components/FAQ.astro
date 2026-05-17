@@ -1,5 +1,6 @@
 ---
 const tg = "https://t.me/Mighty_Teacher";
+const base = import.meta.env.BASE;
 const items = [
   {
     q: "Подойдёт ли мне курс, если у меня нулевой уровень?",
@@ -37,7 +38,7 @@ const items = [
 
     <div class="me-faq__layout">
       <aside class="me-faq__aside">
-        <img src="/assets/img/rudolf-cartoon-standing.jpg" alt="Рудольф" loading="lazy" />
+        <img src={`${base}assets/img/rudolf-cartoon-standing.jpg`} alt="Рудольф" loading="lazy" />
         <h3>Чего‑то нет?</h3>
         <p>Напиши вопрос в <a href={tg} target="_blank" rel="noopener noreferrer" style="color:var(--color-accent)">Telegram</a> — отвечу сегодня, без шаблонов.</p>
       </aside>

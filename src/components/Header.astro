@@ -1,11 +1,12 @@
 ---
 const tg = "https://t.me/Mighty_Teacher";
+const base = import.meta.env.BASE;
 ---
 <header class="me-header">
   <div class="me-container">
     <div class="me-header__row">
       <a class="me-header__logo" href="#top">
-        <img src="/assets/img/logo-full.jpg" alt="Mighty English" width="40" height="40" />
+        <img src={`${base}assets/img/logo-full.jpg`} alt="Mighty English" width="40" height="40" />
         <div class="me-header__brand">
           мощный английский
           <small>Mighty English · Rudolf Ladner</small>

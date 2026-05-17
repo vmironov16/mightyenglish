@@ -8,6 +8,7 @@ interface Props {
   description?: string;
 }
 
+const base = import.meta.env.BASE;
 const { title = 'Мощный английский', description = 'Авторская школа английского языка Рудольфа Ладнера' } = Astro.props;
 ---
 <!DOCTYPE html>
@@ -17,7 +18,7 @@ const { title = 'Мощный английский', description = 'Авторс
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#322D6B" />
     <meta name="description" content={description} />
-    <link rel="shortcut icon" href="/assets/img/english.png" type="image/x-icon" />
+    <link rel="shortcut icon" href={`${base}assets/img/english.png`} type="image/x-icon" />
     <title>{title}</title>
   </head>
   <body>

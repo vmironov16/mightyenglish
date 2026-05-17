@@ -1,12 +1,13 @@
 ---
 const tg = "https://t.me/Mighty_Teacher";
+const base = import.meta.env.BASE;
 ---
 <section class="me-section me-section--dark" id="about">
   <div class="me-container">
     <div class="me-about">
       <div class="me-about__grid">
         <div class="me-about__photo-wrap">
-          <img src="/assets/img/rudolf-warm.png" alt="Рудольф Ладнер" loading="lazy" />
+          <img src={`${base}assets/img/rudolf-warm.png`} alt="Рудольф Ладнер" loading="lazy" />
         </div>
 
         <div>

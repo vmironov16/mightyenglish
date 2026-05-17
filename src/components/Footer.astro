@@ -3,12 +3,13 @@ const tg = "https://t.me/Mighty_Teacher";
 const bot = "https://t.me/MIGHTY_ENGLISH_info_bot";
 const channel = "https://t.me/mighty_english";
 const events = "https://t.me/MightyLife";
+const base = import.meta.env.BASE;
 ---
 <footer class="me-footer">
   <div class="me-container">
     <div class="me-footer__row">
       <div class="me-footer__brand">
-        <img src="/assets/img/logo-full.jpg" alt="Mighty English" width="56" height="56" />
+        <img src={`${base}assets/img/logo-full.jpg`} alt="Mighty English" width="56" height="56" />
         <div class="me-footer__name">
           мощный английский
           <small>Mighty English · Rudolf Ladner · с 2013</small>
