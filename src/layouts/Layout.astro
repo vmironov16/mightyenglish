@@ -2,7 +2,6 @@
 import '../styles/global.css';
 import '../styles/tokens.css';
 import '../styles/landing.css';
-
 interface Props {
   title?: string;
   description?: string;
@@ -22,5 +21,10 @@ const { title = 'Мощный английский', description = 'Авторс
   </head>
   <body>
     <slot />
+    <script>
+      if (import.meta.env.DEV) {
+        import('../components/agentation-init');
+      }
+    </script>
   </body>
 </html>
