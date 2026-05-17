@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import '../styles/tokens.css';
 import '../styles/landing.css';
+import CookieBanner from '../components/CookieBanner.astro';
 interface Props {
   title?: string;
   description?: string;
@@ -21,6 +22,7 @@ const { title = 'Мощный английский', description = 'Авторс
   </head>
   <body>
     <slot />
+    <CookieBanner />
     <script>
       if (import.meta.env.DEV) {
         import('../components/agentation-init');
