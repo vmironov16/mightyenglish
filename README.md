@@ -1,62 +1,152 @@
-# Mighty English Jekyll Theme
+# Mighty English — лендинг школы английского языка Рудольфа Ладнера
 
-![](./particle.jpg)
+Одностраничный сайт авторской школы английского языка **Mighty English /
+Мощный английский**. Лендинг продаёт личный бренд преподавателя Рудольфа
+Ладнера: человек покупает человека — доверие, интерес, выбор формата,
+запись через Telegram.
 
-This is a simple and minimalist template for Jekyll designed for developers that want to show of their portfolio.
+> **Тип проекта:** статический лендинг (одностраничник). Без CMS и админки.
+> Приоритет — мобильная версия. Все CTA ведут в Telegram.
 
-The Theme features:
+---
 
-- Gulp
-- SASS
-- Sweet Scroll
-- Particle.js
-- BrowserSync
-- Font Awesome and Devicon icons
-- Google Analytics
-- Info Customization
+## О проекте
 
-## Basic Setup
+| Параметр | Значение |
+|---|---|
+| Клиент | Рудольф Александрович Ладнер — преподаватель английского, C2 Proficiency |
+| Продукт | Лендинг авторской школы Mighty English |
+| Флагман | «Мощный курс» — видеокурс по грамматике + комьюнити в Telegram |
+| География | Очно — Набережные Челны и Казань. Онлайн — весь мир |
+| Сегмент | Премиум |
+| Главный CTA | «Записаться в Telegram» → бот `@MIGHTY_ENGLISH_info_bot` |
+| Запасной контакт | Личка Рудольфа — `t.me/Mighty_Teacher` |
+| Email | ladnerrudolf@mail.ru |
 
-1. [Install Jekyll](http://jekyllrb.com)
-2. Clone the particle theme: `git clone https://github.com/nrandecker/particle.git`
-3. Edit `_config.yml` to personalize your site.
+Подробный бриф, тексты, карта секций и стратегия — в документе
+`mighty_english_landing_doc.md`.
 
-## Site and User Settings
+---
 
-You have to fill some informations on `_config.yml` to customize your site.
+## Технологический стек
+
+- **Astro** — генератор статического сайта. Отдаёт чистый HTML, держит
+  высокий Lighthouse, поддерживает компоненты и будущий блог.
+- **CSS** — нативный CSS с custom properties (токены из `DESIGN.md`).
+  Допустимо подключить Tailwind v4, сгенерировав тему из `DESIGN.md`.
+- **JavaScript** — минимум, ванильный. Анимации появления через
+  `IntersectionObserver`, аккордеон FAQ, мобильное меню.
+- **Хостинг** — статика: GitHub Pages, Netlify или Vercel.
+- **Аналитика** — Яндекс.Метрика (Вебвизор, карта кликов, цели конверсии).
+
+Без бэкенда и базы данных. Формы нет — главный CTA ведёт напрямую в Telegram.
+
+---
+
+## Структура репозитория
 
 ```
-# Site settings
-description: A blog about lorem ipsum dolor sit amet
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://localhost:3000" # the base hostname & protocol for your site
-
+.
+├── README.md                       # этот файл — для людей
+├── AGENTS.md                       # инструкции для AI-кодинг-агентов
+├── DESIGN.md                       # дизайн-система (формат Google Stitch)
+├── mighty_english_landing_doc.md   # полный рабочий документ проекта
+├── astro.config.mjs
+├── package.json
+├── public/                         # статика: favicon, robots.txt, og-image
+│   ├── favicon.svg
+│   ├── robots.txt
+│   └── images/                     # фото Рудольфа, логотип, скриншоты
+├── src/
+│   ├── pages/
+│   │   └── index.astro             # единственная страница лендинга
+│   ├── components/                 # секции лендинга (Hero, Trust, About …)
+│   ├── layouts/
+│   │   └── Base.astro              # обёртка: <head>, мета, шрифты, Метрика
+│   └── styles/
+│       └── tokens.css              # CSS-переменные из DESIGN.md
+└── ...
 ```
 
-**Don't forget to change your url before you deploy your site!**
+---
 
-## Color and Particle Customization
-- Color Customization
-  - Edit the sass variables
-- Particle Customization
-  - Edit the json data in particle function in app.js
-  - Refer to [Particle.js](https://github.com/VincentGarreau/particles.js/) for help
+## Запуск проекта
 
-## Running the blog in local
+Требуется **Node.js 18+**.
 
-In order to compile the assets and run Jekyll on local you need to follow those steps:
+```bash
+# установить зависимости
+npm install
 
-- Install [NodeJS](https://nodejs.org/)
-- Install [Jekyll](https://jekyllrb.com): `sudo gem install bundler jekyll`
-- Install [Yarn](https://yarnpkg.com/): `npm install -g yarn`
-- Install dependencies: `yarn`
-- Run: `gulp`
+# локальная разработка (http://localhost:4321)
+npm run dev
 
+# сборка статики в ./dist
+npm run build
 
-## License
+# предпросмотр собранной версии
+npm run preview
+```
 
-This theme is free and open source software, distributed under the The MIT License. So feel free to use this Jekyll theme anyway you want.
+---
 
-## Based on
+## Карта лендинга
 
- [Jekyll Particle Theme](https://github.com/nrandecker/particle)
+Одна страница, 12 секций сверху вниз:
+
+1. **Хедер** (sticky) — логотип, якорное меню, CTA
+2. **Hero** — фото Рудольфа, заголовок-обещание, главный CTA
+3. **Доверие** — 5 цифр-фактов (10+ лет, C2, КФУ+КИУ, сотни студентов, тысячи занятий)
+4. **О Рудольфе** — история и философия (тёмная секция)
+5. **Методика** — 3 шага занятия: Актуализация → Материал → Практика
+6. **Форматы и услуги** — сетка карточек услуг
+7. **Мощный курс** — флагман, описание, 3 тарифа
+8. **Уникальные форматы** — Театр, Паркур, Speaking Club
+9. **Социальные доказательства** — отзывы, скриншоты
+10. **FAQ** — аккордеон из 8 вопросов
+11. **Финальный CTA** — закрытие (тёмная секция)
+12. **Footer** — контакты, навигация
+
+Полное описание каждой секции с целями и обоснованием порядка — в
+`mighty_english_landing_doc.md`, блок 3 (UX/UI архитектор).
+
+---
+
+## Контент-файлы проекта
+
+| Файл | Кто читает | Назначение |
+|---|---|---|
+| `README.md` | Люди | Что за проект и как его запустить |
+| `AGENTS.md` | Кодинг-агенты | Как собирать, тестировать и вести проект |
+| `DESIGN.md` | Дизайн-агенты | Как сайт должен выглядеть (дизайн-система) |
+| `mighty_english_landing_doc.md` | Команда | Полный бриф: маркетинг, UX, тексты, ТЗ |
+
+**Перед версткой любого UI-компонента обязательно прочитать `DESIGN.md`** —
+там зафиксированы цвета, типографика, отступы и компоненты. Все тексты для
+секций брать из `mighty_english_landing_doc.md` (блок 4 — копирайтер),
+не переписывать.
+
+---
+
+## Целевые показатели качества
+
+- Lighthouse (mobile): Performance ≥ 90 · SEO ≥ 95 · Accessibility ≥ 95 ·
+  Best Practices ≥ 95
+- LCP до 2.5 с · CLS < 0.1
+- Адаптив: 375 / 768 / 1024 / 1440 px
+- Браузеры: Chrome, Safari, Firefox, Edge — последние 2 версии
+
+---
+
+## Внешние ссылки
+
+- Telegram-бот: `@MIGHTY_ENGLISH_info_bot`
+- Написать Рудольфу: `t.me/Mighty_Teacher`
+- Telegram-канал: `t.me/mighty_english`
+- События и театр: `t.me/MightyLife`
+- Speaking Club: `t.me/+-EOibY5AHF04NzIy`
+
+---
+
+*© 2026 Мощный английский / Mighty English. Рудольф Ладнер.
+Набережные Челны · Казань · Онлайн.*
