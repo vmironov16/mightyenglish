@@ -1,0 +1,55 @@
+---
+const tg = "https://t.me/mighty_english";
+const items = [
+  { q: "У меня ноль. С нуля берёшь?", a: "Беру с A2 — это уровень «могу заказать кофе и понять расписание». Чистый ноль — нет, потому что в одиночку с ним нечего обсуждать, а играть в учителя для первокурсника я не люблю." },
+  { q: "А пробный урок бесплатный?", a: "Пробный — 1 500 ₽, 30 минут в Zoom. Если после него не сработались — деньги возвращаю. За двенадцать лет вернул семь раз — статистика честная." },
+  { q: "Сколько уроков нужно?", a: "По‑честному — 4–6 месяцев, чтобы английский «остался». На результат «не страшно поехать в отпуск» хватит 8 недель. Чудес за 2 урока не бывает, и я их не продаю." },
+  { q: "Что с расписанием?", a: "Договариваемся в Telegram, я работаю с 10:00 до 21:00 по Мск. Перенос — бесплатно, если за 12 часов. После — урок сгорает, я тоже человек." },
+  { q: "Готовишь к IELTS / TOEFL / Cambridge?", a: "К IELTS — да, основной формат подготовки. Средний результат учеников 7.5. К Cambridge — да, к CAE / CPE. К TOEFL — нет, формат не люблю." },
+  { q: "Записываешь уроки?", a: "Да. Запись и конспект приходят тебе в Telegram в день урока. Хранятся у тебя — я ничего не публикую без разрешения." },
+];
+---
+<section class="me-section" id="faq" style="background: var(--color-surface-card)">
+  <div class="me-container">
+    <div class="me-section__head">
+      <div class="me-eyebrow">вопросы</div>
+      <h2>Что обычно спрашивают перед записью.</h2>
+      <p>Всё, чего нет в списке, — пиши в Telegram. Отвечаю в течение дня, без скрипта.</p>
+    </div>
+
+    <div class="me-faq__layout">
+      <aside class="me-faq__aside">
+        <img src="/assets/img/rudolf-cartoon-standing.png" alt="Рудольф" loading="lazy" />
+        <h3>Чего‑то нет?</h3>
+        <p>Напиши вопрос в <a href={tg} target="_blank" rel="noopener noreferrer" style="color:var(--color-accent)">Telegram</a> — отвечу сегодня, без шаблонов.</p>
+      </aside>
+
+      <div class="me-faq__list">
+        {items.map((item, i) => (
+          <div class={`me-faq__item${i === 0 ? " me-faq__item--open" : ""}`} data-faq>
+            <div class="me-faq__q">
+              <span>{item.q}</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.4" stroke-linecap="round" aria-hidden="true">
+                <path d="M12 5V19M5 12H19"/>
+              </svg>
+            </div>
+            <div class="me-faq__a"><p>{item.a}</p></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+(function () {
+  var items = document.querySelectorAll('[data-faq]');
+  items.forEach(function (item) {
+    item.querySelector('.me-faq__q').addEventListener('click', function () {
+      var isOpen = item.classList.contains('me-faq__item--open');
+      items.forEach(function (el) { el.classList.remove('me-faq__item--open'); });
+      if (!isOpen) item.classList.add('me-faq__item--open');
+    });
+  });
+})();
+</script>

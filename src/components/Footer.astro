@@ -1,53 +1,29 @@
 ---
-interface Props {
-  footerText: string;
-  email: string;
-  vk: string;
-  whatsapp: string;
-  telegram: string;
-}
-const { footerText, email, vk, whatsapp, telegram } = Astro.props;
-const year = new Date().getFullYear();
+const tg = "https://t.me/mighty_english";
 ---
-<footer class="bg-primary py-10 px-6 text-center">
-  <div class="max-w-site mx-auto">
-    <p class="text-white/70 text-[0.9rem] mb-5">
-      &copy; {year} {footerText}
-    </p>
-    <div class="flex justify-center gap-4">
-      <a href={`mailto:${email}`} aria-label="Email" class="social-icon">
-        <i class="fas fa-envelope"></i>
-      </a>
-      <a href={vk} target="_blank" rel="noopener" aria-label="VK" class="social-icon">
-        <i class="fab fa-vk"></i>
-      </a>
-      <a href={whatsapp} target="_blank" rel="noopener" aria-label="WhatsApp" class="social-icon">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-      <a href={telegram} target="_blank" rel="noopener" aria-label="Telegram" class="social-icon">
-        <i class="fab fa-telegram"></i>
-      </a>
+<footer class="me-footer">
+  <div class="me-container">
+    <div class="me-footer__row">
+      <div class="me-footer__brand">
+        <img src="/assets/img/logo-full.jpg" alt="Mighty English" width="56" height="56" />
+        <div class="me-footer__name">
+          мощный английский
+          <small>Mighty English · Rudolf Ladner · с 2014</small>
+        </div>
+      </div>
+
+      <nav class="me-footer__links" aria-label="Навигация в футере">
+        <a href="#method">Методика</a>
+        <a href="#services">Форматы</a>
+        <a href="#tariffs">Тарифы</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#faq">FAQ</a>
+        <a href={tg} target="_blank" rel="noopener noreferrer">Telegram</a>
+      </nav>
+    </div>
+
+    <div class="me-footer__legal">
+      © 2014 — 2026 · Рудольф Ладнер · ИП · Все ученики — настоящие. Все цены — окончательные.
     </div>
   </div>
 </footer>
-
-<style>
-  .social-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 1.15rem;
-    text-decoration: none;
-    transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
-  }
-  .social-icon:hover {
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
-    transform: translateY(-3px);
-  }
-</style>

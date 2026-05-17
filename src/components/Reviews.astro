@@ -1,0 +1,35 @@
+---
+const reviews = [
+  { initial: "А", name: "Аня", meta: "Indiv · 6 мес", body: "За три месяца я начала думать на английском. Без zoom‑зомби и домашек на 40 страниц — просто разговор. Сдала собес в Stripe." },
+  { initial: "Д", name: "Дима", meta: "Intensive · 4 недели", body: "Перед переездом в Берлин взял интенсив. К концу мог обсуждать договор аренды без переводчика — и не ненавидеть процесс." },
+  { initial: "К", name: "Катя", meta: "Pair · 8 мес", body: "Учились вдвоём с мужем. Рудольф первый, кто не стесняется поправлять и шутить одновременно. У нас наконец появилась общая привычка." },
+  { initial: "М", name: "Михаил", meta: "Indiv · 1 год", body: "С B1 дошёл до C1 за 11 месяцев. Главное — он не учитель из роли, а человек, которому интересен ты. Это и есть метод." },
+  { initial: "О", name: "Оля", meta: "Indiv · IELTS", body: "Сдала IELTS на 8.0. До Рудольфа было 6.5 после двух школ. Разница не в часах, а в том, что мы наконец говорили о моих ошибках, а не о Past Perfect." },
+  { initial: "Н", name: "Никита", meta: "Indiv · 4 мес", body: "Думал, что слишком занят. Оказалось — три урока в неделю и голосовые в перерывах между встречами. За четыре месяца перестал переводить в голове." },
+];
+---
+<section class="me-section" id="reviews">
+  <div class="me-container">
+    <div class="me-section__head">
+      <div class="me-eyebrow">отзывы</div>
+      <h2>Не reviews — а живые сообщения учеников.</h2>
+      <p>Скриншоты в Telegram сохраняю с разрешения. Кому&#8209;то нужны были собеседования, кому&#8209;то — переезд, кому&#8209;то — отказаться от Google Translate в почте.</p>
+    </div>
+
+    <div class="me-reviews__grid">
+      {reviews.map((r) => (
+        <article class="me-review">
+          <div class="me-review__mark" aria-hidden="true">"</div>
+          <div class="me-review__body">{r.body}</div>
+          <div class="me-review__who">
+            <div class="me-review__avatar" aria-hidden="true">{r.initial}</div>
+            <div>
+              <div class="me-review__name">{r.name}</div>
+              <div class="me-review__meta">{r.meta}</div>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
